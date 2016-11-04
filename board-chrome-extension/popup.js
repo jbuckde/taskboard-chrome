@@ -5,7 +5,7 @@ function onPageDetailsReceived(pageDetails)  {
     pageURL = pageDetails.url,
     pageSummary = pageDetails.summary; 
     
-    var url = "http://localhost:8080/board/selector?pageTitle=" + encodeURIComponent(pageTitle) + "&pageURL=" + encodeURIComponent(pageURL); 
+    var url = "https://board.int.sap.hana.ondemand.com/board/selector?pageTitle=" + encodeURIComponent(pageTitle) + "&pageURL=" + encodeURIComponent(pageURL); 
     document.getElementById("selectorView").setAttribute("src", url);
 }
 
