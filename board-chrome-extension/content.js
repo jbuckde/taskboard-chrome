@@ -1,6 +1,6 @@
+var oPageInfo = {
+    'title': jQuery(document).find("title").text(),
+    'url': window.location.href
+};
 // Send a message containing the page details back to the event page
-chrome.runtime.sendMessage({
-    'title': document.title,
-    'url': window.location.href,
-    'summary': window.getSelection().toString()
-});
+chrome.runtime.sendMessage(oPageInfo);
