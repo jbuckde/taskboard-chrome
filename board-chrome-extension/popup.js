@@ -21,12 +21,19 @@ window.addEventListener("load", function(evt)
             }
         });
     });
+
+    var sTargetBoardURL = "https://board.int.sap.hana.ondemand.com/board/";
+    chrome.storage.sync.get("targetURL", function(item) {
+        sTargetBoardURL = item && item.targetURL ? item.targetURL : "https://board.int.sap.hana.ondemand.com/board/";
+    });
+
+
     //Add listener to react on content.js data extraction and trigger board,group selector from board web application
     chrome.runtime.onMessage.addListener(function (oPageDetails) 
     {
         var pageTitle = oPageDetails.title, //
         pageURL = oPageDetails.url, //
-        boarURL = "https://board.int.sap.hana.ondemand.com/board/selector?pageTitle=",
+        boarURL = sTargetBoardURL + "/selector?pageTitle=",
         sURL = boarURL + encodeURIComponent(pageTitle) + "&pageURL=" + encodeURIComponent(pageURL);
         $("#selectorView").attr("src", sURL);
     });
