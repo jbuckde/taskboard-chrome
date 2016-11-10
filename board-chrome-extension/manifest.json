@@ -2,10 +2,14 @@
     "manifest_version": 2,
     "name": "Taskboard Hyperlink Extension",
     "description": "Add the hyperlink of the current page to the taskboard selected with this plugin.",
-    "version": "0.2.1",
+    "version": "0.3",
     "browser_action": {
-        "default_icon": "icon.png",
+        "default_icon": "logo.png",
         "default_popup": "popup.html"
+    },
+    "icons": { 
+        "16": "logo.png",
+        "48": "logo48.png"
     },
     "permissions": [
         "tabs",
