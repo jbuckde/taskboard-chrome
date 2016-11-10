@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Taskboard Hyperlink Extension",
-    "description": "Add the hyperlink of the current page to the taskboard selected with this plugin.",
+    "name": "Board Hyperlink Extension",
+    "description": "This extension let you add the hyperlink of the current page to the selected Group.",
     "version": "0.3",
     "browser_action": {
         "default_icon": "logo.png",
