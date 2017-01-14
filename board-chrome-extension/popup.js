@@ -9,7 +9,7 @@ window.addEventListener("load", function(evt)
         sTabHostname = matches && matches[1];
         
         // Inject the jquery and content script into the current page
-        chrome.tabs.executeScript(null, { file: "jquery-3.1.1.min.js" }, function()
+        chrome.tabs.executeScript(null, { file: "jquery.min.js" }, function()
         {
             if( "support.wdf.sap.corp" === sTabHostname )
             {
