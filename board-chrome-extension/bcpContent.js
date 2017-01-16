@@ -1,24 +1,19 @@
 var sBcpHost = "support.wdf.sap.corp";
-function getBCPFrame() 
-{
-    return $("frame#WorkAreaFrame1", $("iframe").contents()).contents();
-};
+var sPageTitle = jQuery(document).find("title").text();
+var regex = /[^:](\d*)[,](.*)([-])/;
+var aMatchParts = regex.exec(sPageTitle);
 
-function getBcpURL(oFrameDom) 
-{
-    var sMessageId = $("span[id*='object_id']", oFrameDom).text();
+function getBcpURL(sMessageId) {
     return window.location.protocol + "//" + sBcpHost + "/sap/support/message/" + sMessageId;
 };
 
-function getBCPTitle(oFrameDom) 
-{
-    return $("span[id*='description']", oFrameDom).text();
+function getBCPTitle(sTitle) {
+    return sTitle.trim();
 };
 
-var oFrameDom = getBCPFrame(), //
-    oPageInfo = {
-        'title': getBCPTitle(oFrameDom),
-        'url': getBcpURL(oFrameDom)
-    };
+var oPageInfo = {
+    'title': getBCPTitle(aMatchParts[2]),
+    'url': getBcpURL(aMatchParts[1])
+};
 // Send a message containing the page details back to the event page
 chrome.runtime.sendMessage(oPageInfo);
