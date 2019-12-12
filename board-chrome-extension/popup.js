@@ -22,9 +22,9 @@ window.addEventListener("load", function(evt)
         });
     });
 
-    var sTargetBoardURL = "https://board.int.sap.hana.ondemand.com/board/";
+    var sTargetBoardURL = "https://board.int.sap.eu2.hana.ondemand.com/board/";
     chrome.storage.sync.get("targetURL", function(item) {
-        sTargetBoardURL = item && item.targetURL ? item.targetURL : "https://board.int.sap.hana.ondemand.com/board/";
+        sTargetBoardURL = item && item.targetURL ? item.targetURL : "https://board.int.sap.eu2.hana.ondemand.com/board/";
     });
 
 
