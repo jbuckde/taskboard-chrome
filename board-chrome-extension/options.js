@@ -20,7 +20,7 @@ function restore_options()
 {
   // Use default value color = 'red' and likesColor = true.
   chrome.storage.sync.get({
-    targetURL: "https://board.int.sap.hana.ondemand.com/board/"
+    targetURL: "https://board.int.sap.eu2.hana.ondemand.com/board/"
   }, function(items) {
      document.getElementById("url").value = items.targetURL;
   });
@@ -32,7 +32,7 @@ function restore_options()
 function reset_options() 
 {
     chrome.storage.sync.set({
-         targetURL: "https://board.int.sap.hana.ondemand.com/board/"
+         targetURL: "https://board.int.sap.eu2.hana.ondemand.com/board/"
     }, function() {
         // Update status to let user know options were saved.
         var status = document.getElementById("status");
