@@ -2,21 +2,21 @@
     "manifest_version": 2,
     "name": "Board Hyperlink Extension",
     "description": "This extension let you add the hyperlink of the current page to the selected Group.",
-    "version": "0.4",
+    "version": "0.5",
     "browser_action": {
         "default_icon": "logo.png",
         "default_popup": "popup.html"
     },
-    "icons": { 
-        "16" : "logo.png",
-        "32" : "logo32.png",
-        "48" : "logo48.png",
-        "128" : "logo75.png"
+    "icons": {
+        "16": "logo.png",
+        "32": "logo32.png",
+        "48": "logo48.png",
+        "128": "logo75.png"
     },
     "permissions": [
         "tabs",
         "storage",
-        "http://*/*", 
+        "http://*/*",
         "https://*/*"
     ],
     "options_ui": {
